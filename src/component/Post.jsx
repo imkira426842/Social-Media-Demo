@@ -13,7 +13,10 @@ function Post({ post }) {
   const handleDelete = () => {
     deletePost(post.id);
   };
-
+  const totalReactions =
+    typeof post.reactions === "number"
+      ? post.reactions
+      : post.reactions.likes + post.reactions.dislikes;
   return (
     <>
       <div className="card Post" style={{ width: "30rem" }}>
@@ -26,8 +29,7 @@ function Post({ post }) {
             </span>
           ))}
           <div className="alert alert-success reactions" role="alert">
-            This Post has been reacted by{" "}
-            {post.reactions.likes + post.reactions.dislikes} people.
+            This Post has been reacted by {totalReactions} people.
           </div>
           <span
             className="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle"

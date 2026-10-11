@@ -45,3 +45,12 @@
   margin-top: 50px;
   font-family: 'Times New Roman', Times, serif;
 }
+.Spinner{
+  width: 90px;
+    height: 90px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #212529;
+    border-radius: 50%;
+    margin-top: 15%;
+
+}
